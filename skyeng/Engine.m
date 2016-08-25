@@ -23,4 +23,31 @@
     return instance;
 }
 
+
+#pragma mark - Properties
+
+- (NetworkManager *)networkManager {
+    if (!_networkManager) {
+        _networkManager = [NetworkManager new];
+    }
+    
+    return _networkManager;
+}
+
+- (MeaningsManager *)meaningsManager {
+    if (!_meaningsManager) {
+        _meaningsManager = [MeaningsManager new];
+    }
+    
+    return _meaningsManager;
+}
+
+- (TrainingsManager *)trainingsManager {
+    if (!_trainingsManager) {
+        _trainingsManager = [TrainingsManager new];
+    }
+    
+    return _trainingsManager;
+}
+
 @end

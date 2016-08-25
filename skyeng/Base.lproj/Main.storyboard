@@ -39,12 +39,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9i6-9J-855" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79" y="399"/>
+            <point key="canvasLocation" x="-636" y="399"/>
         </scene>
-        <!--Start View Controller-->
+        <!--Begin View Controller-->
         <scene sceneID="shX-cH-lDK">
             <objects>
-                <viewController storyboardIdentifier="StartViewController" id="y4B-0K-JvB" customClass="StartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeginViewController" id="y4B-0K-JvB" customClass="BeginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Oz-wp-oM0"/>
                         <viewControllerLayoutGuide type="bottom" id="Pn4-iY-6EX"/>
@@ -69,7 +69,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Qln-pt-IOV" kind="show" id="Vlv-Sn-4dj"/>
+                                    <segue destination="lSo-xK-z46" kind="show" id="H7E-Mc-QJp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,12 +84,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdO-83-ax4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="399"/>
+            <point key="canvasLocation" x="102" y="399"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Load Training View Controller-->
+        <scene sceneID="Uwt-CQ-81L">
+            <objects>
+                <viewController storyboardIdentifier="LoadTrainingViewController" id="lSo-xK-z46" customClass="LoadTrainingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FMA-MR-1wi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hgj-yP-ShQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oah-qe-mC7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nsA-rO-mo9">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="bko-dW-Izz"/>
+                                    <constraint firstAttribute="height" constant="20" id="nql-El-tDa"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nsA-rO-mo9" firstAttribute="centerX" secondItem="Oah-qe-mC7" secondAttribute="centerX" id="K5T-U7-9pW"/>
+                            <constraint firstItem="nsA-rO-mo9" firstAttribute="centerY" secondItem="Oah-qe-mC7" secondAttribute="centerY" id="QwU-CH-whe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Qln-pt-IOV" kind="show" identifier="WordTaskSegue" id="7M5-vB-P9m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55j-ed-9yD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="399"/>
+        </scene>
+        <!--Word Task View Controller-->
         <scene sceneID="gZN-yN-zHV">
             <objects>
-                <viewController storyboardIdentifier="QuestionViewController" id="Qln-pt-IOV" customClass="QuestionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WordTaskViewController" id="Qln-pt-IOV" customClass="WordTaskViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BU5-m8-awp"/>
                         <viewControllerLayoutGuide type="bottom" id="sft-dR-VLn"/>
@@ -109,7 +143,7 @@
                                     <color key="titleColor" red="0.36470588235294116" green="0.61176470588235299" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xXY-Lt-YsS" kind="show" id="usB-N9-cs9"/>
+                                    <action selector="idkTouched:" destination="Qln-pt-IOV" eventType="touchUpInside" id="bCA-kq-IdF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qha-2L-5hs">
@@ -133,6 +167,9 @@
                                         <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="optionTouched:" destination="Qln-pt-IOV" eventType="touchUpInside" id="4jZ-6a-8DB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ci-Wu-Pii">
                                 <rect key="frame" x="24" y="420" width="552" height="48"/>
@@ -155,6 +192,9 @@
                                         <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="optionTouched:" destination="Qln-pt-IOV" eventType="touchUpInside" id="6g4-4H-fYl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-jE-bvF">
                                 <rect key="frame" x="24" y="360" width="552" height="48"/>
@@ -177,6 +217,9 @@
                                         <real key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="optionTouched:" destination="Qln-pt-IOV" eventType="touchUpInside" id="rk9-Q5-D2s"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyn-Be-gHj">
                                 <rect key="frame" x="24" y="300" width="552" height="48"/>
@@ -199,6 +242,9 @@
                                         <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="optionTouched:" destination="Qln-pt-IOV" eventType="touchUpInside" id="IGs-fU-ZFe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="apricot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7x-Wu-jti">
                                 <rect key="frame" x="16" y="77" width="568" height="42"/>
@@ -254,15 +300,24 @@
                             <constraint firstAttribute="trailingMargin" secondItem="5Ci-Wu-Pii" secondAttribute="trailing" constant="4" id="teB-D5-KjA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idkButton" destination="zdM-GW-vhE" id="OxN-3H-WzU"/>
+                        <outlet property="textLabel" destination="K7x-Wu-jti" id="Wg2-Ad-sya"/>
+                        <outletCollection property="optionButtons" destination="wyn-Be-gHj" id="GoZ-4D-gJQ"/>
+                        <outletCollection property="optionButtons" destination="ZKT-jE-bvF" id="W6k-9j-hSm"/>
+                        <outletCollection property="optionButtons" destination="5Ci-Wu-Pii" id="Lmq-f3-CMF"/>
+                        <outletCollection property="optionButtons" destination="Qha-2L-5hs" id="z9t-RG-Bhl"/>
+                        <segue destination="xXY-Lt-YsS" kind="show" identifier="MeaningSegue" id="YvY-TK-ZRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7WH-oP-710" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="399"/>
+            <point key="canvasLocation" x="1583" y="399"/>
         </scene>
-        <!--Right Answer View Controller-->
+        <!--Meaning View Controller-->
         <scene sceneID="pMt-iV-WC4">
             <objects>
-                <viewController storyboardIdentifier="RightAnswerViewController" id="xXY-Lt-YsS" customClass="RightAnswerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeaningViewController" id="xXY-Lt-YsS" customClass="MeaningViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZE-ys-biV"/>
                         <viewControllerLayoutGuide type="bottom" id="onw-8j-dGR"/>
@@ -315,7 +370,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="PKf-i4-t3E" kind="show" id="uaY-GY-92m"/>
+                                    <action selector="nextTouched:" destination="xXY-Lt-YsS" eventType="touchUpInside" id="6iZ-ax-mP6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="абрикос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di9-EW-ZSv">
@@ -353,6 +408,13 @@
                             <constraint firstItem="di9-EW-ZSv" firstAttribute="leading" secondItem="MXi-Ot-XPZ" secondAttribute="leadingMargin" constant="-4" id="ytd-84-3OT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="peC-Rz-T64" id="29M-Lz-kYh"/>
+                        <outlet property="textLabel" destination="gb6-jt-agM" id="qj0-p8-ROU"/>
+                        <outlet property="translationLabel" destination="di9-EW-ZSv" id="euY-sP-5yg"/>
+                        <segue destination="PKf-i4-t3E" kind="show" identifier="ResultsSegue" id="8hb-GF-VNe"/>
+                        <segue destination="Qln-pt-IOV" kind="show" identifier="NextMeaningSegue" id="RKR-ce-1Pw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcy-UV-dB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -371,7 +433,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkt-Rq-NN5">
-                                <rect key="frame" x="24" y="190" width="552" height="57"/>
+                                <rect key="frame" x="24" y="199" width="552" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="fZb-6n-dvE"/>
@@ -396,7 +458,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Qln-pt-IOV" kind="show" id="UA3-8j-8sh"/>
+                                    <action selector="oneMoreTimeTouched:" destination="PKf-i4-t3E" eventType="touchUpInside" id="bVs-fT-57K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -407,9 +469,12 @@
                             <constraint firstItem="hfl-Qd-YGv" firstAttribute="centerY" secondItem="wuS-mA-wm8" secondAttribute="centerY" constant="40" id="AbD-tt-hzB"/>
                             <constraint firstItem="hfl-Qd-YGv" firstAttribute="leading" secondItem="wuS-mA-wm8" secondAttribute="leadingMargin" constant="4" id="CGO-Wm-WpU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hfl-Qd-YGv" secondAttribute="trailing" constant="4" id="HIl-dX-CaJ"/>
-                            <constraint firstItem="jkt-Rq-NN5" firstAttribute="centerY" secondItem="wuS-mA-wm8" secondAttribute="centerY" constant="-82" id="qyn-Ub-cdF"/>
+                            <constraint firstItem="jkt-Rq-NN5" firstAttribute="centerY" secondItem="wuS-mA-wm8" secondAttribute="centerY" constant="-73" id="qyn-Ub-cdF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="jkt-Rq-NN5" id="1ar-Hp-OhC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ii-G3-nmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -417,6 +482,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UA3-8j-8sh"/>
+        <segue reference="RKR-ce-1Pw"/>
     </inferredMetricsTieBreakers>
 </document>

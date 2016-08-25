@@ -1,5 +1,5 @@
 //
-//  StartViewController.h
+//  WordTaskViewController.h
 //  skyeng
 //
 //  Created by Victor Galaguza on 8/25/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartViewController : UIViewController
+@interface WordTaskViewController : UIViewController
 
 @end

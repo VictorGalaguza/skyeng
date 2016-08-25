@@ -7,8 +7,12 @@
 //
 
 #import "ResultsViewController.h"
+#import "Engine.h"
+#import "UIStoryboard+Helper.h"
 
 @interface ResultsViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
 
@@ -16,22 +20,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSRange result = [[Engine sharedEngine].trainingsManager.currentTraining getResult];
+    
+    self.resultLabel.text = [NSString stringWithFormat:@"%tu / %tu", result.location, result.length];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
+#pragma mark - IBAction
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)oneMoreTimeTouched:(id)sender {
+    UIViewController *loadingTrainingScreen = [UIStoryboard viewController:kLoadTrainingScreen inStoryboard:kMainStoryboard];
+    
+    self.navigationController.viewControllers = @[ loadingTrainingScreen ];
 }
-*/
 
 @end

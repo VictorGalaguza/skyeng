@@ -1,5 +1,5 @@
 //
-//  QuestionViewController.h
+//  MeaningViewController.h
 //  skyeng
 //
 //  Created by Victor Galaguza on 8/25/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuestionViewController : UIViewController
+@interface MeaningViewController : UIViewController
 
 @end

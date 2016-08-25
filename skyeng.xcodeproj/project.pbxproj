@@ -13,13 +13,22 @@
 		5E436D631D6E4E2700253575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E436D621D6E4E2700253575 /* Assets.xcassets */; };
 		5E436D661D6E4E2700253575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E436D641D6E4E2700253575 /* LaunchScreen.storyboard */; };
 		5E436D741D6E4FF900253575 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D731D6E4FF900253575 /* Engine.m */; };
-		5E436D771D6E512600253575 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D761D6E512600253575 /* StartViewController.m */; };
-		5E436D7A1D6E514300253575 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D791D6E514300253575 /* QuestionViewController.m */; };
-		5E436D7D1D6E516100253575 /* RightAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D7C1D6E516100253575 /* RightAnswerViewController.m */; };
+		5E436D7A1D6E514300253575 /* WordTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D791D6E514300253575 /* WordTaskViewController.m */; };
+		5E436D7D1D6E516100253575 /* MeaningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D7C1D6E516100253575 /* MeaningViewController.m */; };
 		5E436D831D6E519500253575 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D821D6E519500253575 /* ResultsViewController.m */; };
 		5E436D8A1D6E5E7A00253575 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E436D881D6E5E7A00253575 /* Roboto-Light.ttf */; };
 		5E436D8B1D6E5E7A00253575 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E436D891D6E5E7A00253575 /* Roboto-Regular.ttf */; };
 		5E436D8F1D6E622E00253575 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D8E1D6E622E00253575 /* UIView+Border.m */; };
+		5E436D951D6E697500253575 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D941D6E697500253575 /* NetworkManager.m */; };
+		5E436D981D6E699B00253575 /* MeaningsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D971D6E699B00253575 /* MeaningsManager.m */; };
+		5E436DA11D6EDE4500253575 /* TrainingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DA01D6EDE4500253575 /* TrainingsManager.m */; };
+		5E436DA41D6EDE6200253575 /* Training.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DA31D6EDE6200253575 /* Training.m */; };
+		5E436DA71D6EE22B00253575 /* Meaning.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DA61D6EE22B00253575 /* Meaning.m */; };
+		5E436DAA1D6EFFDF00253575 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DA91D6EFFDF00253575 /* NSDictionary+Safe.m */; };
+		5E436DAD1D6F041400253575 /* TextTranslationPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DAC1D6F041400253575 /* TextTranslationPair.m */; };
+		5E436DB01D6F1D4A00253575 /* LoadTrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DAF1D6F1D4A00253575 /* LoadTrainingViewController.m */; };
+		5E436DB31D6F2C4D00253575 /* UIStoryboard+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DB21D6F2C4D00253575 /* UIStoryboard+Helper.m */; };
+		5E436DB61D6F386B00253575 /* NSMutableArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DB51D6F386B00253575 /* NSMutableArray+Sorting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,18 +43,36 @@
 		5E436D6F1D6E4FF100253575 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5E436D721D6E4FF900253575 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
 		5E436D731D6E4FF900253575 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
-		5E436D751D6E512600253575 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
-		5E436D761D6E512600253575 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
-		5E436D781D6E514300253575 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
-		5E436D791D6E514300253575 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
-		5E436D7B1D6E516100253575 /* RightAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightAnswerViewController.h; sourceTree = "<group>"; };
-		5E436D7C1D6E516100253575 /* RightAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightAnswerViewController.m; sourceTree = "<group>"; };
+		5E436D781D6E514300253575 /* WordTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTaskViewController.h; sourceTree = "<group>"; };
+		5E436D791D6E514300253575 /* WordTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTaskViewController.m; sourceTree = "<group>"; };
+		5E436D7B1D6E516100253575 /* MeaningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeaningViewController.h; sourceTree = "<group>"; };
+		5E436D7C1D6E516100253575 /* MeaningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeaningViewController.m; sourceTree = "<group>"; };
 		5E436D811D6E519500253575 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		5E436D821D6E519500253575 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		5E436D881D6E5E7A00253575 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		5E436D891D6E5E7A00253575 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		5E436D8D1D6E622E00253575 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
 		5E436D8E1D6E622E00253575 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		5E436D931D6E697500253575 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		5E436D941D6E697500253575 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		5E436D961D6E699B00253575 /* MeaningsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeaningsManager.h; sourceTree = "<group>"; };
+		5E436D971D6E699B00253575 /* MeaningsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeaningsManager.m; sourceTree = "<group>"; };
+		5E436D9F1D6EDE4500253575 /* TrainingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainingsManager.h; sourceTree = "<group>"; };
+		5E436DA01D6EDE4500253575 /* TrainingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingsManager.m; sourceTree = "<group>"; };
+		5E436DA21D6EDE6200253575 /* Training.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Training.h; sourceTree = "<group>"; };
+		5E436DA31D6EDE6200253575 /* Training.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Training.m; sourceTree = "<group>"; };
+		5E436DA51D6EE22B00253575 /* Meaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meaning.h; sourceTree = "<group>"; };
+		5E436DA61D6EE22B00253575 /* Meaning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meaning.m; sourceTree = "<group>"; };
+		5E436DA81D6EFFDF00253575 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		5E436DA91D6EFFDF00253575 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		5E436DAB1D6F041400253575 /* TextTranslationPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTranslationPair.h; sourceTree = "<group>"; };
+		5E436DAC1D6F041400253575 /* TextTranslationPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTranslationPair.m; sourceTree = "<group>"; };
+		5E436DAE1D6F1D4A00253575 /* LoadTrainingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadTrainingViewController.h; sourceTree = "<group>"; };
+		5E436DAF1D6F1D4A00253575 /* LoadTrainingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadTrainingViewController.m; sourceTree = "<group>"; };
+		5E436DB11D6F2C4D00253575 /* UIStoryboard+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Helper.h"; sourceTree = "<group>"; };
+		5E436DB21D6F2C4D00253575 /* UIStoryboard+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Helper.m"; sourceTree = "<group>"; };
+		5E436DB41D6F386B00253575 /* NSMutableArray+Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sorting.h"; sourceTree = "<group>"; };
+		5E436DB51D6F386B00253575 /* NSMutableArray+Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sorting.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +143,12 @@
 			children = (
 				5E436D641D6E4E2700253575 /* LaunchScreen.storyboard */,
 				5E436D5F1D6E4E2700253575 /* Main.storyboard */,
-				5E436D751D6E512600253575 /* StartViewController.h */,
-				5E436D761D6E512600253575 /* StartViewController.m */,
-				5E436D781D6E514300253575 /* QuestionViewController.h */,
-				5E436D791D6E514300253575 /* QuestionViewController.m */,
-				5E436D7B1D6E516100253575 /* RightAnswerViewController.h */,
-				5E436D7C1D6E516100253575 /* RightAnswerViewController.m */,
+				5E436DAE1D6F1D4A00253575 /* LoadTrainingViewController.h */,
+				5E436DAF1D6F1D4A00253575 /* LoadTrainingViewController.m */,
+				5E436D781D6E514300253575 /* WordTaskViewController.h */,
+				5E436D791D6E514300253575 /* WordTaskViewController.m */,
+				5E436D7B1D6E516100253575 /* MeaningViewController.h */,
+				5E436D7C1D6E516100253575 /* MeaningViewController.m */,
 				5E436D811D6E519500253575 /* ResultsViewController.h */,
 				5E436D821D6E519500253575 /* ResultsViewController.m */,
 			);
@@ -131,6 +158,12 @@
 		5E436D841D6E51EF00253575 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E436DA51D6EE22B00253575 /* Meaning.h */,
+				5E436DA61D6EE22B00253575 /* Meaning.m */,
+				5E436DAB1D6F041400253575 /* TextTranslationPair.h */,
+				5E436DAC1D6F041400253575 /* TextTranslationPair.m */,
+				5E436DA21D6EDE6200253575 /* Training.h */,
+				5E436DA31D6EDE6200253575 /* Training.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -138,6 +171,12 @@
 		5E436D851D6E51FA00253575 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				5E436D931D6E697500253575 /* NetworkManager.h */,
+				5E436D941D6E697500253575 /* NetworkManager.m */,
+				5E436D961D6E699B00253575 /* MeaningsManager.h */,
+				5E436D971D6E699B00253575 /* MeaningsManager.m */,
+				5E436D9F1D6EDE4500253575 /* TrainingsManager.h */,
+				5E436DA01D6EDE4500253575 /* TrainingsManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -164,6 +203,12 @@
 			children = (
 				5E436D8D1D6E622E00253575 /* UIView+Border.h */,
 				5E436D8E1D6E622E00253575 /* UIView+Border.m */,
+				5E436DA81D6EFFDF00253575 /* NSDictionary+Safe.h */,
+				5E436DA91D6EFFDF00253575 /* NSDictionary+Safe.m */,
+				5E436DB11D6F2C4D00253575 /* UIStoryboard+Helper.h */,
+				5E436DB21D6F2C4D00253575 /* UIStoryboard+Helper.m */,
+				5E436DB41D6F386B00253575 /* NSMutableArray+Sorting.h */,
+				5E436DB51D6F386B00253575 /* NSMutableArray+Sorting.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -241,12 +286,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E436D5B1D6E4E2700253575 /* AppDelegate.m in Sources */,
+				5E436D981D6E699B00253575 /* MeaningsManager.m in Sources */,
+				5E436DB31D6F2C4D00253575 /* UIStoryboard+Helper.m in Sources */,
+				5E436DB01D6F1D4A00253575 /* LoadTrainingViewController.m in Sources */,
 				5E436D831D6E519500253575 /* ResultsViewController.m in Sources */,
-				5E436D7A1D6E514300253575 /* QuestionViewController.m in Sources */,
-				5E436D771D6E512600253575 /* StartViewController.m in Sources */,
+				5E436D7A1D6E514300253575 /* WordTaskViewController.m in Sources */,
+				5E436DA11D6EDE4500253575 /* TrainingsManager.m in Sources */,
+				5E436DA71D6EE22B00253575 /* Meaning.m in Sources */,
+				5E436DB61D6F386B00253575 /* NSMutableArray+Sorting.m in Sources */,
 				5E436D8F1D6E622E00253575 /* UIView+Border.m in Sources */,
-				5E436D7D1D6E516100253575 /* RightAnswerViewController.m in Sources */,
+				5E436DA41D6EDE6200253575 /* Training.m in Sources */,
+				5E436D7D1D6E516100253575 /* MeaningViewController.m in Sources */,
 				5E436D741D6E4FF900253575 /* Engine.m in Sources */,
+				5E436DAA1D6EFFDF00253575 /* NSDictionary+Safe.m in Sources */,
+				5E436DAD1D6F041400253575 /* TextTranslationPair.m in Sources */,
+				5E436D951D6E697500253575 /* NetworkManager.m in Sources */,
 				5E436D581D6E4E2700253575 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
