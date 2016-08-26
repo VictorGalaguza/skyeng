@@ -22,6 +22,3 @@ static NSString * const kMainStoryboard = @"Main";
 
 // Screens.
 static NSString * const kLoadTrainingScreen = @"LoadTrainingViewController";
-static NSString * const kWordTaskScreen = @"WordTaskViewController";
-static NSString * const kMeaningScreen = @"MeaningViewController";
-static NSString * const kResultsScreen = @"ResultsViewController";

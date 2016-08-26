@@ -30,8 +30,8 @@
 #pragma mark - IBAction
 
 - (IBAction)oneMoreTimeTouched:(id)sender {
+    // Go to the loading training screen.
     UIViewController *loadingTrainingScreen = [UIStoryboard viewController:kLoadTrainingScreen inStoryboard:kMainStoryboard];
-    
     self.navigationController.viewControllers = @[ loadingTrainingScreen ];
 }
 
