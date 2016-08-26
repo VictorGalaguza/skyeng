@@ -11,10 +11,10 @@
 
 @interface Meaning : NSObject
 
-@property (nonatomic, assign) NSInteger meaningId;
-@property (nonatomic, strong) TextTranslationPair *textTranslationPair;
-@property (nonatomic, strong) NSArray<TextTranslationPair *> *alternatives;
-@property (nonatomic, strong) NSArray<NSString *> *imageUrls;
+@property (assign, nonatomic) NSInteger meaningId;
+@property (strong, nonatomic) TextTranslationPair *textTranslationPair;
+@property (strong, nonatomic) NSArray<TextTranslationPair *> *alternatives;
+@property (strong, nonatomic) NSArray<NSString *> *imageUrls;
 
 // Init.
 - (instancetype)initWithInfo:(NSDictionary<NSString *, id> *)info;

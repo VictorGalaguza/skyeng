@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProgressViewController.h"
 
-@interface MeaningViewController : UIViewController
+@interface MeaningViewController : ProgressViewController
 
 @end

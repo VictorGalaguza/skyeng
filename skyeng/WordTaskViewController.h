@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProgressViewController.h"
 
-@interface WordTaskViewController : UIViewController
+@interface WordTaskViewController : ProgressViewController
 
 @end

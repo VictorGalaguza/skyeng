@@ -10,8 +10,8 @@
 
 @interface UIView (Border)
 
-@property (nonatomic) IBInspectable UIColor *borderColor;
-@property (nonatomic) IBInspectable CGFloat borderWidth;
-@property (nonatomic) IBInspectable CGFloat cornerRadius;
+@property (assign, nonatomic) IBInspectable UIColor *borderColor;
+@property (assign, nonatomic) IBInspectable CGFloat borderWidth;
+@property (assign, nonatomic) IBInspectable CGFloat cornerRadius;
 
 @end

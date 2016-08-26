@@ -16,8 +16,8 @@
 
 + (Engine *)sharedEngine;
 
-@property (nonatomic, strong) NetworkManager *networkManager;
-@property (nonatomic, strong) MeaningsManager *meaningsManager;
-@property (nonatomic, strong) TrainingsManager *trainingsManager;
+@property (strong, nonatomic) NetworkManager *networkManager;
+@property (strong, nonatomic) MeaningsManager *meaningsManager;
+@property (strong, nonatomic) TrainingsManager *trainingsManager;
 
 @end

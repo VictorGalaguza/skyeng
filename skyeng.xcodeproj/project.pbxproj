@@ -29,6 +29,10 @@
 		5E436DB01D6F1D4A00253575 /* LoadTrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DAF1D6F1D4A00253575 /* LoadTrainingViewController.m */; };
 		5E436DB31D6F2C4D00253575 /* UIStoryboard+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DB21D6F2C4D00253575 /* UIStoryboard+Helper.m */; };
 		5E436DB61D6F386B00253575 /* NSMutableArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DB51D6F386B00253575 /* NSMutableArray+Sorting.m */; };
+		5E436DBD1D6F9A0C00253575 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DBC1D6F9A0C00253575 /* NavigationControllerDelegate.m */; };
+		5E436DC01D6F9A8100253575 /* ProgressScreenPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DBF1D6F9A8100253575 /* ProgressScreenPushTransition.m */; };
+		5E436DC41D6F9EB500253575 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DC31D6F9EB500253575 /* ProgressViewController.m */; };
+		5E436DC71D6F9EC800253575 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436DC61D6F9EC800253575 /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,14 @@
 		5E436DB21D6F2C4D00253575 /* UIStoryboard+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Helper.m"; sourceTree = "<group>"; };
 		5E436DB41D6F386B00253575 /* NSMutableArray+Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sorting.h"; sourceTree = "<group>"; };
 		5E436DB51D6F386B00253575 /* NSMutableArray+Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sorting.m"; sourceTree = "<group>"; };
+		5E436DBB1D6F9A0C00253575 /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		5E436DBC1D6F9A0C00253575 /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		5E436DBE1D6F9A8100253575 /* ProgressScreenPushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressScreenPushTransition.h; sourceTree = "<group>"; };
+		5E436DBF1D6F9A8100253575 /* ProgressScreenPushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressScreenPushTransition.m; sourceTree = "<group>"; };
+		5E436DC21D6F9EB500253575 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		5E436DC31D6F9EB500253575 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		5E436DC51D6F9EC800253575 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		5E436DC61D6F9EC800253575 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,8 @@
 		5E436D6E1D6E4FD400253575 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5E436DC11D6F9E6E00253575 /* Progress */,
+				5E436DB71D6F8FAB00253575 /* Transition */,
 				5E436D641D6E4E2700253575 /* LaunchScreen.storyboard */,
 				5E436D5F1D6E4E2700253575 /* Main.storyboard */,
 				5E436DAE1D6F1D4A00253575 /* LoadTrainingViewController.h */,
@@ -211,6 +225,28 @@
 				5E436DB51D6F386B00253575 /* NSMutableArray+Sorting.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		5E436DB71D6F8FAB00253575 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				5E436DBB1D6F9A0C00253575 /* NavigationControllerDelegate.h */,
+				5E436DBC1D6F9A0C00253575 /* NavigationControllerDelegate.m */,
+				5E436DBE1D6F9A8100253575 /* ProgressScreenPushTransition.h */,
+				5E436DBF1D6F9A8100253575 /* ProgressScreenPushTransition.m */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
+		5E436DC11D6F9E6E00253575 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				5E436DC21D6F9EB500253575 /* ProgressViewController.h */,
+				5E436DC31D6F9EB500253575 /* ProgressViewController.m */,
+				5E436DC51D6F9EC800253575 /* ProgressView.h */,
+				5E436DC61D6F9EC800253575 /* ProgressView.m */,
+			);
+			name = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,18 +322,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E436D5B1D6E4E2700253575 /* AppDelegate.m in Sources */,
+				5E436DC01D6F9A8100253575 /* ProgressScreenPushTransition.m in Sources */,
 				5E436D981D6E699B00253575 /* MeaningsManager.m in Sources */,
 				5E436DB31D6F2C4D00253575 /* UIStoryboard+Helper.m in Sources */,
 				5E436DB01D6F1D4A00253575 /* LoadTrainingViewController.m in Sources */,
+				5E436DC71D6F9EC800253575 /* ProgressView.m in Sources */,
 				5E436D831D6E519500253575 /* ResultsViewController.m in Sources */,
 				5E436D7A1D6E514300253575 /* WordTaskViewController.m in Sources */,
 				5E436DA11D6EDE4500253575 /* TrainingsManager.m in Sources */,
+				5E436DBD1D6F9A0C00253575 /* NavigationControllerDelegate.m in Sources */,
 				5E436DA71D6EE22B00253575 /* Meaning.m in Sources */,
 				5E436DB61D6F386B00253575 /* NSMutableArray+Sorting.m in Sources */,
 				5E436D8F1D6E622E00253575 /* UIView+Border.m in Sources */,
 				5E436DA41D6EDE6200253575 /* Training.m in Sources */,
 				5E436D7D1D6E516100253575 /* MeaningViewController.m in Sources */,
 				5E436D741D6E4FF900253575 /* Engine.m in Sources */,
+				5E436DC41D6F9EB500253575 /* ProgressViewController.m in Sources */,
 				5E436DAA1D6EFFDF00253575 /* NSDictionary+Safe.m in Sources */,
 				5E436DAD1D6F041400253575 /* TextTranslationPair.m in Sources */,
 				5E436D951D6E697500253575 /* NetworkManager.m in Sources */,

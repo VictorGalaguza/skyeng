@@ -42,6 +42,9 @@ static NSString * const MeaningSegue = @"MeaningSegue";
         [self.optionButtons[i] setTitle:self.options[i].translation
                                forState:UIControlStateNormal];
     }
+    
+    // Set progress.
+    self.progressView.value = [[Engine sharedEngine].trainingsManager.currentTraining getProgress];
 }
 
 

@@ -10,8 +10,8 @@
 
 @interface TextTranslationPair : NSObject
 
-@property (nonatomic, copy) NSString *text;
-@property (nonatomic, copy) NSString *translation;
+@property (copy, nonatomic) NSString *text;
+@property (copy, nonatomic) NSString *translation;
 
 // Init.
 - (instancetype)initWithInfo:(NSDictionary<NSString *, NSString *> *)info;

@@ -18,6 +18,7 @@
 // Helpers.
 - (Meaning *)currentMeaning;
 - (Meaning *)nextMeaning;
+- (float)getProgress; // returns 0.0f ... 1.0f
 - (NSRange)getResult;
 - (void)saveChoosenOption:(TextTranslationPair *)ttp;
 

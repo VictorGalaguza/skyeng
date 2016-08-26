@@ -30,6 +30,9 @@ static NSString * const ResultsSegue = @"ResultsSegue";
     self.textLabel.text = meaning.textTranslationPair.text;
     self.imageView.image = nil;
     self.translationLabel.text = meaning.textTranslationPair.translation;
+    
+    // Set progress.
+    self.progressView.value = [[Engine sharedEngine].trainingsManager.currentTraining getProgress];
 }
 
 

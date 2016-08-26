@@ -57,6 +57,10 @@
     return result;
 }
 
+- (float)getProgress {
+    return self.currentMeaningIndex / (float)(self.meanings.count - 1);
+}
+
 - (NSRange)getResult {
     NSInteger countCorrectAnswers = 0;
     

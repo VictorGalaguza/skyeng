@@ -29,6 +29,11 @@
 
 #pragma mark - API
 
+/*
+ Note:
+ Sometimes server returns empty translates (rus) for example: viaticus, bruneian etc.
+ So, app will display empty option button.
+ */
 - (void)getMeaningsWithIds:(NSArray<NSNumber *> *)meaningIds callback:(MeaningsLoadedCallback)callback {
     NSString *meaningIdsString = [meaningIds componentsJoinedByString:@","];
     

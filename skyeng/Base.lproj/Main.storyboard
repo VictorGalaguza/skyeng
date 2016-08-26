@@ -34,10 +34,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
+                        <outlet property="delegate" destination="4mF-Vy-osv" id="FXu-m7-Lof"/>
                         <segue destination="y4B-0K-JvB" kind="relationship" relationship="rootViewController" id="LxX-Fa-c1t"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9i6-9J-855" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="4mF-Vy-osv" customClass="NavigationControllerDelegate"/>
             </objects>
             <point key="canvasLocation" x="-636" y="399"/>
         </scene>
@@ -256,21 +258,15 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pf-BE-sC3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pf-BE-sC3" customClass="ProgressView">
                                 <rect key="frame" x="48" y="36" width="504" height="8"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="tbd-Pt-eZe"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -302,6 +298,7 @@
                     </view>
                     <connections>
                         <outlet property="idkButton" destination="zdM-GW-vhE" id="OxN-3H-WzU"/>
+                        <outlet property="progressView" destination="0pf-BE-sC3" id="inj-v5-9Kk"/>
                         <outlet property="textLabel" destination="K7x-Wu-jti" id="Wg2-Ad-sya"/>
                         <outletCollection property="optionButtons" destination="wyn-Be-gHj" id="GoZ-4D-gJQ"/>
                         <outletCollection property="optionButtons" destination="ZKT-jE-bvF" id="W6k-9j-hSm"/>
@@ -336,21 +333,15 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-zy-4cT">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-zy-4cT" customClass="ProgressView">
                                 <rect key="frame" x="48" y="36" width="504" height="8"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="yP6-W7-0TT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -410,6 +401,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="peC-Rz-T64" id="29M-Lz-kYh"/>
+                        <outlet property="progressView" destination="L5s-zy-4cT" id="m1U-7A-hEc"/>
                         <outlet property="textLabel" destination="gb6-jt-agM" id="qj0-p8-ROU"/>
                         <outlet property="translationLabel" destination="di9-EW-ZSv" id="euY-sP-5yg"/>
                         <segue destination="PKf-i4-t3E" kind="show" identifier="ResultsSegue" id="8hb-GF-VNe"/>
