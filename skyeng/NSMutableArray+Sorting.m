@@ -15,7 +15,7 @@
     NSMutableArray *result = [NSMutableArray new];
     NSMutableArray *free = self.mutableCopy;
     
-    if (count > [free count]) {
+    if (count > free.count) {
         count = free.count;
     }
     
