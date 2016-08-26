@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C14C4FC753FE0019022481E /* libPods-skyeng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E6AF6368ED475D91976B9D /* libPods-skyeng.a */; };
 		5E436D581D6E4E2700253575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D571D6E4E2700253575 /* main.m */; };
 		5E436D5B1D6E4E2700253575 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E436D5A1D6E4E2700253575 /* AppDelegate.m */; };
 		5E436D611D6E4E2700253575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E436D5F1D6E4E2700253575 /* Main.storyboard */; };
@@ -85,6 +86,9 @@
 		5E436DC31D6F9EB500253575 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		5E436DC51D6F9EC800253575 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		5E436DC61D6F9EC800253575 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		7B2F6940A4DE88774FA4B24E /* Pods-skyeng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyeng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-skyeng/Pods-skyeng.debug.xcconfig"; sourceTree = "<group>"; };
+		91E6AF6368ED475D91976B9D /* libPods-skyeng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-skyeng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF30270303BF11D3D8F3355F /* Pods-skyeng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyeng.release.xcconfig"; path = "Pods/Target Support Files/Pods-skyeng/Pods-skyeng.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,17 +96,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C14C4FC753FE0019022481E /* libPods-skyeng.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03F23EC658DCA8E5C943E17F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B2F6940A4DE88774FA4B24E /* Pods-skyeng.debug.xcconfig */,
+				CF30270303BF11D3D8F3355F /* Pods-skyeng.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5E436D4A1D6E4E2700253575 = {
 			isa = PBXGroup;
 			children = (
 				5E436D551D6E4E2700253575 /* skyeng */,
 				5E436D541D6E4E2700253575 /* Products */,
+				03F23EC658DCA8E5C943E17F /* Pods */,
+				9A96AEFBB632265899523A55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +265,14 @@
 			name = Progress;
 			sourceTree = "<group>";
 		};
+		9A96AEFBB632265899523A55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91E6AF6368ED475D91976B9D /* libPods-skyeng.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E436D6A1D6E4E2700253575 /* Build configuration list for PBXNativeTarget "skyeng" */;
 			buildPhases = (
+				10277EC90E4ABCD5B1B9B3E3 /* [CP] Check Pods Manifest.lock */,
 				5E436D4F1D6E4E2700253575 /* Sources */,
 				5E436D501D6E4E2700253575 /* Frameworks */,
 				5E436D511D6E4E2700253575 /* Resources */,
+				DA64225A99120423F6497ADF /* [CP] Embed Pods Frameworks */,
+				3CFDF288FEB245084FFD7A09 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +342,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10277EC90E4ABCD5B1B9B3E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3CFDF288FEB245084FFD7A09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-skyeng/Pods-skyeng-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA64225A99120423F6497ADF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-skyeng/Pods-skyeng-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E436D4F1D6E4E2700253575 /* Sources */ = {
@@ -451,6 +526,7 @@
 		};
 		5E436D6B1D6E4E2700253575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B2F6940A4DE88774FA4B24E /* Pods-skyeng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = skyeng/Info.plist;
@@ -462,6 +538,7 @@
 		};
 		5E436D6C1D6E4E2700253575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF30270303BF11D3D8F3355F /* Pods-skyeng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = skyeng/Info.plist;

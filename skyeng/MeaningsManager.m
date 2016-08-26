@@ -36,8 +36,9 @@
  */
 - (void)getMeaningsWithIds:(NSArray<NSNumber *> *)meaningIds callback:(MeaningsLoadedCallback)callback {
     NSString *meaningIdsString = [meaningIds componentsJoinedByString:@","];
+    NSString *host = [NSString stringWithFormat:@"%@:%@", kSkyEngProtocol, kSkyEngDictionaryApiUrl];
     
-    NSURLRequest *request = [NetworkManager requestWithHost:kSkyEngDictionaryApiUrl
+    NSURLRequest *request = [NetworkManager requestWithHost:host
                                                        href:[NSString stringWithFormat:@"wordtasks?meaningIds=%@&width=%.0f",
                                                              meaningIdsString, _screenWidth]];
     

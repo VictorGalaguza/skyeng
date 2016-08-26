@@ -9,6 +9,7 @@
 #import "Meaning.h"
 #import "NSDictionary+Safe.h"
 #import "NSMutableArray+Sorting.h"
+#import "Constants.h"
 
 static NSInteger const kCountOptions = 4;
 
@@ -58,6 +59,32 @@ static NSInteger const kCountOptions = 4;
 
 - (BOOL)isCorrectTTP:(TextTranslationPair *)ttp {
     return [self.textTranslationPair isEqual:ttp];
+}
+
+- (NSURL *)defaultImageUrl {
+    return [self defaultImageUrlWithQuality:kImageDefaultQuality];
+}
+
+- (NSURL *)defaultImageUrlWithQuality:(float)quality {
+    NSURL *result = nil;
+    
+    if (self.imageUrls.count > 0) {
+        NSString *imageUrl = [NSString stringWithFormat:@"%@:%@",
+                              kSkyEngProtocol, self.imageUrls[0]];
+        
+        if (quality != kImageDefaultQuality) {
+            NSRange range = [imageUrl rangeOfString:kImageQualityKeyword];
+            if (range.location != 0) {
+                imageUrl = [NSString stringWithFormat:@"%@/%.0f",
+                            [imageUrl substringToIndex:range.location + kImageQualityKeyword.length],
+                            (quality * 100)];
+            }
+        }
+        
+        return [NSURL URLWithString:imageUrl];
+    }
+    
+    return result;
 }
 
 @end

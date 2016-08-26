@@ -22,5 +22,7 @@
 // Helpers.
 - (NSArray<TextTranslationPair *> *)getOptions;
 - (BOOL)isCorrectTTP:(TextTranslationPair *)ttp;
+- (NSURL *)defaultImageUrl;
+- (NSURL *)defaultImageUrlWithQuality:(float)quality; // quality: 0.0f ... 1.0f, or -1.0f if default quality is needed.
 
 @end

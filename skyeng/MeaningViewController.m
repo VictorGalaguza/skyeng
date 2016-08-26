@@ -8,6 +8,7 @@
 
 #import "MeaningViewController.h"
 #import "Engine.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 static NSString * const NextMeaningSegue = @"NextMeaningSegue";
 static NSString * const ResultsSegue = @"ResultsSegue";
@@ -28,8 +29,13 @@ static NSString * const ResultsSegue = @"ResultsSegue";
     Meaning *meaning = [[Engine sharedEngine].trainingsManager.currentTraining currentMeaning];
     
     self.textLabel.text = meaning.textTranslationPair.text;
-    self.imageView.image = nil;
     self.translationLabel.text = meaning.textTranslationPair.translation;
+
+    NSURL *imageUrl = [meaning defaultImageUrlWithQuality:1.0f];
+    if (imageUrl) {
+        // Loading image from cache (if it was succesfully downloaded on the previous screen) or from the server.
+        [self.imageView sd_setImageWithURL:imageUrl placeholderImage:nil];
+    }
     
     // Set progress.
     self.progressView.value = [[Engine sharedEngine].trainingsManager.currentTraining getProgress];

@@ -8,6 +8,7 @@
 
 #import "WordTaskViewController.h"
 #import "Engine.h"
+#import <SDWebImage/SDWebImageManager.h>
 
 static NSString * const MeaningSegue = @"MeaningSegue";
 
@@ -20,7 +21,9 @@ static NSString * const MeaningSegue = @"MeaningSegue";
 @property (strong, nonatomic) NSArray<TextTranslationPair *> *options;
 
 // Helpers.
+- (void)disableAllButtons;
 - (void)animateOptionsWithColors;
+- (void)loadingDefaultImageOfMeaning;
 
 @end
 
@@ -45,6 +48,8 @@ static NSString * const MeaningSegue = @"MeaningSegue";
     
     // Set progress.
     self.progressView.value = [[Engine sharedEngine].trainingsManager.currentTraining getProgress];
+    
+    [self loadingDefaultImageOfMeaning];
 }
 
 
@@ -102,6 +107,26 @@ static NSString * const MeaningSegue = @"MeaningSegue";
     } completion:^(BOOL finished) {
         // Go to the meaning screen.
         [weakSelf performSegueWithIdentifier:MeaningSegue sender:nil];
+    }];
+}
+
+- (void)loadingDefaultImageOfMeaning {
+    Meaning *meaning = [[Engine sharedEngine].trainingsManager.currentTraining currentMeaning];
+    NSURL *imageUrl = [meaning defaultImageUrlWithQuality:1.0f];
+    if (!imageUrl) {
+        return;
+    }
+    
+    // Start load the default image for current meaning that we will display on the meaning screen.
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    [manager downloadImageWithURL:imageUrl options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//        NSLog(@"loading %@ -> %ld or %ld", imageUrl.absoluteString, (long)receivedSize, (long)expectedSize);
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+//        if (image) {
+//            NSLog(@"loading finished %@", imageUrl.absoluteString);
+//        } else {
+//            NSLog(@"loading failed %@", imageUrl.absoluteString);
+//        }
     }];
 }
 

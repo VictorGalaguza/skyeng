@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 // API.
-static NSString * const kSkyEngDictionaryApiUrl = @"https://dictionary.skyeng.ru/api/v1/";
+static NSString * const kSkyEngProtocol = @"https";
+static NSString * const kSkyEngDictionaryApiUrl = @"//dictionary.skyeng.ru/api/v1/";
 
 // Network.
 static NSTimeInterval const kRequestTimeout = 60.0;
@@ -22,3 +23,7 @@ static NSString * const kMainStoryboard = @"Main";
 
 // Screens.
 static NSString * const kLoadTrainingScreen = @"LoadTrainingViewController";
+
+// Images.
+static NSString * const kImageQualityKeyword = @"quality";
+static float const kImageDefaultQuality = -1.0f;
