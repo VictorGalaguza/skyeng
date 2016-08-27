@@ -22,7 +22,7 @@ static NSString * const MeaningSegue = @"MeaningSegue";
 
 // Helpers.
 - (void)disableAllButtons;
-- (void)animateOptionsWithColors;
+- (void)animateOptionWithIndex:(NSUInteger)index;
 - (void)loadingDefaultImageOfMeaning;
 
 @end
@@ -66,7 +66,7 @@ static NSString * const MeaningSegue = @"MeaningSegue";
     [self disableAllButtons];
     
     // Animate.
-    [self animateOptionsWithColors];
+    [self animateOptionWithIndex:optionIndex];
 }
 
 - (IBAction)idkTouched:(id)sender {
@@ -85,24 +85,22 @@ static NSString * const MeaningSegue = @"MeaningSegue";
     self.idkButton.enabled = NO;
 }
 
-- (void)animateOptionsWithColors {
+- (void)animateOptionWithIndex:(NSUInteger)index {
     Meaning *meaning = [[Engine sharedEngine].trainingsManager.currentTraining currentMeaning];
     
     __weak WordTaskViewController *weakSelf = self;
     
-    [UIView animateWithDuration:1.0 animations:^{
-        for (NSUInteger i = 0; i < weakSelf.options.count; i++) {
-            TextTranslationPair *ttp = weakSelf.options[i];
-            UIButton *button = weakSelf.optionButtons[i];
-            
-            button.layer.borderColor = [UIColor whiteColor].CGColor;
-            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-
-            if ([meaning isCorrectTTP:ttp]) {
-                button.backgroundColor = [UIColor colorWithRed:173 / 255.0 green:209 / 255.0 blue:102 / 255.0 alpha:1.0];
-            } else {
-                button.backgroundColor = [UIColor colorWithRed:1.0 green:128 / 255.0 blue:128 / 255.0 alpha:1.0];
-            }
+    [UIView animateWithDuration:0.5 animations:^{
+        TextTranslationPair *ttp = weakSelf.options[index];
+        UIButton *button = weakSelf.optionButtons[index];
+        
+        button.layer.borderColor = [UIColor whiteColor].CGColor;
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        if ([meaning isCorrectTTP:ttp]) {
+            button.backgroundColor = [UIColor colorWithRed:173 / 255.0 green:209 / 255.0 blue:102 / 255.0 alpha:1.0];
+        } else {
+            button.backgroundColor = [UIColor colorWithRed:1.0 green:128 / 255.0 blue:128 / 255.0 alpha:1.0];
         }
     } completion:^(BOOL finished) {
         // Go to the meaning screen.
