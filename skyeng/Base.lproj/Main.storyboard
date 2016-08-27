@@ -375,7 +375,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="peC-Rz-T64">
-                                <rect key="frame" x="0.0" y="152" width="600" height="260"/>
+                                <rect key="frame" x="10" y="152" width="580" height="260"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -386,10 +386,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="di9-EW-ZSv" secondAttribute="trailing" constant="-4" id="DUE-Me-IJ9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5aG-Ps-dKB" secondAttribute="trailing" constant="4" id="FQa-XT-vlT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L5s-zy-4cT" secondAttribute="trailing" constant="28" id="Hqm-iL-3s2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="peC-Rz-T64" secondAttribute="trailing" constant="-20" id="KNT-Xp-ezR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="peC-Rz-T64" secondAttribute="trailing" constant="-10" id="KNT-Xp-ezR"/>
                             <constraint firstItem="peC-Rz-T64" firstAttribute="top" secondItem="gb6-jt-agM" secondAttribute="bottom" constant="10" id="Khg-ec-yGx"/>
                             <constraint firstItem="gb6-jt-agM" firstAttribute="leading" secondItem="MXi-Ot-XPZ" secondAttribute="leadingMargin" constant="-4" id="Mla-IT-FXe"/>
-                            <constraint firstItem="peC-Rz-T64" firstAttribute="leading" secondItem="MXi-Ot-XPZ" secondAttribute="leadingMargin" constant="-20" id="Mq3-YW-atY"/>
+                            <constraint firstItem="peC-Rz-T64" firstAttribute="leading" secondItem="MXi-Ot-XPZ" secondAttribute="leadingMargin" constant="-10" id="Mq3-YW-atY"/>
                             <constraint firstItem="gb6-jt-agM" firstAttribute="top" secondItem="L5s-zy-4cT" secondAttribute="bottom" constant="36" id="YeV-qB-cFG"/>
                             <constraint firstItem="L5s-zy-4cT" firstAttribute="top" secondItem="rZE-ys-biV" secondAttribute="bottom" constant="36" id="eW8-U1-faJ"/>
                             <constraint firstItem="L5s-zy-4cT" firstAttribute="leading" secondItem="MXi-Ot-XPZ" secondAttribute="leadingMargin" constant="28" id="hGh-L4-XNy"/>
